@@ -1,0 +1,111 @@
+html, body{
+   height:100%;
+   font-family: "Roboto", sans-serif;
+}
+
+body{
+   padding:0;
+   margin:0;
+   background-color: beige;
+   color:#000000;
+   text-align:center;
+}
+
+#outer{
+   min-height:100%;
+   width:555px;
+   background-color:white;
+   color: #000000;
+   margin:auto;
+   text-align:left;
+   position:relative;
+
+   }
+#outer p{padding-left:6px; padding-right:6px;}
+* html #outer{
+   height:100%;
+}
+#header{
+   border-top:1px solid #000;
+   border-bottom:1px solid #000;
+   background:#ffffcc;
+   height:97px;
+}
+
+ul {
+	margin: 30px 0 0 0;
+	padding: 0;
+	list-style: none;
+	}
+
+ul li {
+	position: relative;
+	float: left;
+	width:111px;
+}
+	
+li ul {
+	position: absolute;
+	left: 0; /* Set 1px less than menu width */
+	top: auto;
+	display: none;
+	}
+li ul ul{
+	position: absolute;
+	left:100%; /* Set 1px less than menu width */
+	top: -.1em;
+	display: none;
+	}
+
+/* Styles for Menu Items */
+ul li a {
+	display: block;
+	text-decoration: none;
+	color: chocolate;
+	background: #fff; /* IE6 Bug */
+	padding: 5px;
+	border: 1px solid #ccc;
+	}
+/* commented backslash mac hiding hack \*/ 
+* html ul li a {height:1%}
+/* end hack */ 
+
+/* this sets all hovered lists to red */
+li:hover a, li.over a,
+li:hover li:hover a, li.over li.over a,
+li:hover li:hover li:hover a, li.over li.over li.over a,
+li:hover li a:hover, li.over li a:hover,
+li:hover li:hover li:hover a:hover, li.over li li a:hover,
+li:hover li:hover li:hover li:hover a:hover, li.over li.over li.over li.over a:hover 
+{
+   color: chocolate;
+   background-color: bisque;
+}
+
+/* set dropdown to default */
+li:hover li a, li.over li a,
+li:hover li:hover li a, li.over li.over li a,
+li:hover li:hover li:hover li a, li.over li.over li.over li a
+ {
+    color: #777;
+   background-color: #fff;
+}
+li ul li a { padding: 2px 5px; } /* Sub Menu Styles */
+ul li:hover ul ul, ul li:hover ul ul ul, ul li.over ul ul, ul li.over ul ul ul {
+display:none;
+}
+
+ul li:hover ul,ul li li:hover ul,ul li li li:hover ul, ul li.over ul, ul li li.over ul,ul li li li.over ul {
+	display: block;
+}
+
+img{
+	display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+h3{
+	margin-top:40px;
+	margin-bottom:33px;
+}
